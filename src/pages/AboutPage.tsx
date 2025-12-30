@@ -1,27 +1,19 @@
 import ParticleNetwork from '@/components/ParticleNetwork';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Events from '@/components/Events';
-import Team from '@/components/Team';
-import Membership from '@/components/Membership';
 import Footer from '@/components/Footer';
 
-const Index = () => {
+const AboutPage = () => {
   return (
     <>
       <ParticleNetwork />
       <Navbar />
-      <main>
-        <Hero />
+      <main className="pt-24">
         <About />
-        <Events />
-        <Team />
-        <Membership />
         <Footer />
       </main>
     </>
   );
 };
 
-export default Index;
+export default AboutPage;

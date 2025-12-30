@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap, Users, Calendar, Award } from 'lucide-react';
-import aboutTeam from '@/assets/about-team.jpg';
+import aboutHistory from '@/assets/about-history.png';
 import aboutLab from '@/assets/about-lab.jpg';
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
       {/* Background decorations */}
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -68,21 +68,21 @@ const About = () => {
             <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 text-foreground">
               History of <span className="text-primary">IETE-RVCE</span>
             </h3>
-            
+
             <div className="space-y-5 font-sans text-muted-foreground text-lg leading-relaxed">
               <p>
-                IETE-RVCE Student Branch was started in 2017 and since then from having few members 
-                initially to having <span className="text-primary font-semibold">200+ members</span> now, we have shown immense growth in terms of 
+                IETE-RVCE Student Branch was started in 2017 and since then from having few members
+                initially to having <span className="text-primary font-semibold">200+ members</span> now, we have shown immense growth in terms of
                 membership and the quality of events.
               </p>
               <p>
-                We have been successfully conducting workshops, seminars and shifted swiftly to 
-                webinars and online workshops during the pandemic because no matter what the 
+                We have been successfully conducting workshops, seminars and shifted swiftly to
+                webinars and online workshops during the pandemic because no matter what the
                 circumstances, learning never stops.
               </p>
               <p>
-                From encouraging our student members to take up projects that develop a research 
-                mindset to even building this website, we at IETE RVCE have strived to help the 
+                From encouraging our student members to take up projects that develop a research
+                mindset to even building this website, we at IETE RVCE have strived to help the
                 members to gain practical skills to become better professionals.
               </p>
             </div>
@@ -105,7 +105,7 @@ const About = () => {
                   </div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -132,56 +132,20 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="rounded-2xl overflow-hidden border-2 border-primary/20"
-                >
-                  <img
-                    src={aboutTeam}
-                    alt="IETE-RVCE team at hackathon"
-                    className="w-full h-48 object-cover"
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="rounded-2xl overflow-hidden border-2 border-secondary/20"
-                >
-                  <img
-                    src={aboutLab}
-                    alt="Electronics lab at RVCE"
-                    className="w-full h-64 object-cover"
-                  />
-                </motion.div>
-              </div>
-              <div className="pt-8 space-y-4">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="rounded-2xl overflow-hidden border-2 border-accent/20"
-                >
-                  <img
-                    src={aboutLab}
-                    alt="Technical workshop session"
-                    className="w-full h-64 object-cover"
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="rounded-2xl overflow-hidden border-2 border-primary/20"
-                >
-                  <img
-                    src={aboutTeam}
-                    alt="Students collaborating"
-                    className="w-full h-48 object-cover"
-                  />
-                </motion.div>
-              </div>
-            </div>
-            
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="rounded-2xl overflow-hidden border-2 border-primary/20 bg-background/50 backdrop-blur-sm"
+            >
+              <img
+                src={aboutHistory}
+                alt="History of IETE-RVCE"
+                className="w-full h-auto object-cover rounded-xl"
+              />
+            </motion.div>
+
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl -z-10" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl -z-10" />
           </motion.div>
         </div>
 

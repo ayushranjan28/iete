@@ -3,10 +3,10 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Linkedin, Mail } from 'lucide-react';
 
-import teamVineet from '@/assets/team-vineet.png';
-import teamBrahati from '@/assets/team-brahati.png';
-import teamAkshatha from '@/assets/team-akshatha.png';
-import teamVijay from '@/assets/team-vijay.png';
+import teamVineet from '@/assets/team-vineet-new.png';
+import teamBrahati from '@/assets/team-brahati-new.png';
+import teamAkshatha from '@/assets/team-akshatha-new.png';
+import teamVijay from '@/assets/team-vijay-new.png';
 
 interface TeamMember {
   name: string;
@@ -62,7 +62,7 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }
       <div className="relative p-6 rounded-2xl glass border border-border/50 transition-all duration-500 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
         {/* Glowing border on hover */}
         <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 blur-xl -z-10" />
-        
+
         {/* Profile Image with gradient border */}
         <div className="relative w-32 h-32 mx-auto mb-6">
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-accent to-secondary p-[3px] animate-pulse-glow">

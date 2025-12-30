@@ -21,28 +21,28 @@ const teamMembers: TeamMember[] = [
     name: 'Vineet Raj',
     role: 'CHAIR',
     image: teamVineet,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/vineet-raj-589b11298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     email: 'vineet@rvce.edu.in',
   },
   {
     name: 'Brahati Jorapur',
     role: 'SECRETARY',
     image: teamBrahati,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/brahati-jorapur-b20075283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     email: 'brahati@rvce.edu.in',
   },
   {
     name: 'Akshatha N',
     role: 'TREASURER',
     image: teamAkshatha,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/akshatha-n-872107353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     email: 'akshatha@rvce.edu.in',
   },
   {
     name: 'Vijay Sudarshan B',
     role: 'HEAD OF PRODUCTION DESIGN',
     image: teamVijay,
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/vjsud?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     email: 'vijay@rvce.edu.in',
   },
 ];
@@ -91,6 +91,8 @@ const TeamMemberCard = ({ member, index }: { member: TeamMember; index: number }
           {member.linkedin && (
             <a
               href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
             >
               <Linkedin size={18} />

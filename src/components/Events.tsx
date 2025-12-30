@@ -64,7 +64,7 @@ const Events = () => {
                   transition={{ duration: 0.5 }}
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-muted/20"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute top-4 left-4 flex flex-wrap gap-2">

@@ -40,12 +40,12 @@
     --glow-cyan: 187 100% 50%;
     --glow-purple: 280 100% 65%;
     --glow-pink: 320 100% 60%;
-    
+
     --gradient-primary: linear-gradient(135deg, hsl(187 100% 50%), hsl(280 100% 65%));
     --gradient-button: linear-gradient(135deg, hsl(187 100% 45%), hsl(200 100% 50%));
     --gradient-card: linear-gradient(145deg, hsl(220 30% 12%), hsl(220 25% 8%));
     --gradient-border: linear-gradient(135deg, hsl(187 100% 50%), hsl(280 100% 65%));
-    
+
     --shadow-glow-cyan: 0 0 30px hsl(187 100% 50% / 0.3);
     --shadow-glow-purple: 0 0 30px hsl(280 100% 65% / 0.3);
     --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.3);
@@ -71,7 +71,9 @@
     background: linear-gradient(180deg, hsl(220 25% 6%) 0%, hsl(220 30% 4%) 100%);
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-display;
   }
 }
@@ -102,7 +104,7 @@
   .border-gradient {
     border: 2px solid transparent;
     background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))) border-box;
+      linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary))) border-box;
   }
 
   .glow-cyan {
@@ -137,22 +139,39 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { 
+
+  0%,
+  100% {
     box-shadow: 0 0 20px hsl(187 100% 50% / 0.4), 0 0 40px hsl(187 100% 50% / 0.2);
   }
-  50% { 
+
+  50% {
     box-shadow: 0 0 30px hsl(187 100% 50% / 0.6), 0 0 60px hsl(187 100% 50% / 0.3);
   }
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Scrollbar styling */

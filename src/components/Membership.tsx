@@ -19,8 +19,8 @@ const Membership = () => {
     'One time Payment (4 Years)',
     'Valid for 4 Years (B.E./B.Tech)',
     'Access to all IETE Student Forum activities',
-    'Electronic ID Card',
-    'Regular technical updates',
+    'Regular technical updates & workshops',
+    'Networking with industry professionals',
   ];
 
   return (

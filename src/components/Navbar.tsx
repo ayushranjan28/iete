@@ -9,15 +9,14 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/#about' },
-    { name: 'Team', path: '/#team' },
-    { name: 'Membership', path: '/#membership' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'About', path: '/about' },
+    { name: 'Events', path: '/events' },
+    { name: 'Team', path: '/team' },
+    { name: 'Membership', path: '/membership' },
   ];
 
   const isActive = (path: string) => {
-    if (path === '/') return location.pathname === '/';
-    return location.hash === path.replace('/', '');
+    return location.pathname === path;
   };
 
   return (
@@ -44,9 +43,9 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.path}
+                to={item.path}
                 className={`relative font-heading text-sm font-medium tracking-wide transition-colors hover:text-primary ${
                   isActive(item.path) ? 'text-primary' : 'text-foreground/80'
                 }`}
@@ -58,7 +57,7 @@ const Navbar = () => {
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                   />
                 )}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -91,14 +90,16 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.path}
-                  className="font-heading text-foreground/80 hover:text-primary transition-colors"
+                  to={item.path}
+                  className={`font-heading transition-colors ${
+                    isActive(item.path) ? 'text-primary' : 'text-foreground/80 hover:text-primary'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Link
                 to="/join"
